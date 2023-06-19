@@ -24,8 +24,11 @@ RUN apt-get install -y python3 \
     curl \
     git-all
 
+# Update PIP (Python's package manager)
+RUN pip install --upgrade pip
+
 # Install tensorflow. Note that AWS manages Linux distributions
-RUN pip3 install tensorflow-cpu-aws \
+RUN pip3 install tensorflow \
     pyyaml \
     h5py \
     pandas \
