@@ -17,8 +17,9 @@ jobs:
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2
+    # Removing to see if this addresses an issue with the Tensorflow distribution
+    # - name: Set up Docker Buildx
+    #   uses: docker/setup-buildx-action@v2
 
     # May need to use this, but I think the above "Set up Docker Buildx does the same thing"
     # - name: Use buildx
